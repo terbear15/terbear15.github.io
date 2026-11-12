@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Project title — Your Name</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;650&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="index.html">Your Name</a>
+      <nav class="nav">
+        <a href="index.html#projects">Projects</a>
+        <a href="index.html#architecture">Architecture</a>
+        <a href="index.html#about">About</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="wrap project-hero">
+      <a class="back" href="index.html#projects">&larr; All projects</a>
+      <h1>Project title goes here</h1>
+      <p class="lead" style="color: var(--muted); max-width: 60ch; font-size: 20px; margin: 0;">
+        A one or two sentence summary of what this project asks and finds.
+      </p>
+
+      <div class="meta">
+        <div><span>Course</span><strong>Course name</strong></div>
+        <div><span>Year</span><strong>2026</strong></div>
+        <div><span>Tools</span><strong>Python, GeoPandas</strong></div>
+        <div><span>Role</span><strong>Solo / Team of 3</strong></div>
+      </div>
+    </div>
+
+    <div class="wrap project-body">
+      <div class="prose">
+
+        <h2>The question</h2>
+        <p>What were you trying to find out, and why does it matter?</p>
+
+        <div class="figure">hero image or map goes here</div>
+
+        <h2>Data</h2>
+        <p>Where the data came from, what it covers, and how you cleaned it.</p>
+
+        <h2>Method</h2>
+        <p>The steps you took, in plain language. Add a short code snippet if it helps.</p>
+
+        <!-- To embed an interactive map exported from Python (Folium, Plotly, Kepler.gl):
+             save the HTML file in a "maps" folder and use:
+             <iframe class="map-embed" src="maps/my-map.html" loading="lazy"></iframe> -->
+        <div class="figure">interactive map embed goes here</div>
+
+        <h2>Result</h2>
+        <p>What you found, and what you would do next.</p>
+
+        <h2>Links</h2>
+        <p>
+          <a href="https://github.com/your-username/your-repo" style="text-decoration: underline;">Code on GitHub</a>
+          &nbsp;&middot;&nbsp;
+          <a href="#" style="text-decoration: underline;">Live demo</a>
+        </p>
+
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="wrap">&copy; 2026 Your Name</div>
+  </footer>
+
+</body>
+</html>
