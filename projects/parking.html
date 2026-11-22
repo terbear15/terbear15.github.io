@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Downtown Parking Footprint · Terry Boxuan Xu</title>
+  <meta name="description" content="Surface parking in 50 U.S. downtowns: measurement, redevelopment screening, and an AI model for lots missing from OpenStreetMap.">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/site.css">
+</head>
+<body>
+  <div class="ambient" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
+  <div class="grid-lines" aria-hidden="true"></div>
+  <nav class="nav glass"><a class="brand" href="../index.html">Terry Xu</a><a class="link" href="../index.html#spatial">Spatial</a><a class="link" href="../index.html#architecture">Architecture</a><a class="link" href="../index.html#about">About</a></nav>
+
+  <main class="wrap">
+    <header class="p-hero">
+      <a class="back glass reveal" href="../index.html#spatial">← All projects</a>
+      <div class="tag-row reveal" style="display:flex;gap:6px;margin-bottom:16px"><span class="chip blue">Land use</span><span class="chip blue">Transportation</span><span class="chip blue">Computer vision</span></div>
+      <h1 class="reveal d1">Downtown Parking Footprint</h1>
+      <p class="lead reveal d2">How much downtown land do U.S. cities give to surface parking, and which lots screen as candidates for redevelopment?</p>
+      <div class="btns reveal d3">
+        <a class="btn primary" href="https://terbear15.github.io/downtown-parking-footprint/" target="_blank" rel="noopener">Open the live map ↗</a>
+        <a class="btn ghost" href="https://github.com/terbear15/downtown-parking-footprint" target="_blank" rel="noopener">Code on GitHub</a>
+      </div>
+      <div class="meta-bar glass reveal d3" style="margin-top:32px">
+        <div><span>Year</span><b>Fall 2026</b></div>
+        <div><span>Context</span><b>MUSA course final project</b></div>
+        <div><span>Scale</span><b>50 U.S. downtowns</b></div>
+        <div><span>Tools</span><b>Python · TensorFlow.js · MapLibre</b></div>
+      </div>
+    </header>
+
+    <figure class="p-figure glass reveal">
+      <img src="../assets/img/parking-cities.jpg" alt="Surface parking in St. Louis, Birmingham, Indianapolis and Buffalo downtowns">
+      <figcaption>Surface lots inside four downtown boundaries. Darker blue lots meet more of the four screening criteria.</figcaption>
+    </figure>
+
+    <div class="stats four reveal">
+      <div class="stat glass"><b data-count="50">50</b><span>downtowns, one boundary rule</span></div>
+      <div class="stat glass"><b data-count="13346">13,346</b><span>surface lots</span></div>
+      <div class="stat glass"><b data-count="5407">5,407</b><span>acres of surface parking</span></div>
+      <div class="stat glass"><b data-count="20">20</b><span>% of Albuquerque's downtown, the highest share</span></div>
+    </div>
+
+    <div class="p-body">
+      <aside class="toc"><a href="#q">Questions</a><a href="#boundary">Downtown boundary</a><a href="#screen">Candidate screen</a><a href="#ai">AI for missing lots</a><a href="#limits">Limits</a></aside>
+      <article class="prose">
+        <h2 id="q">Two questions</h2>
+        <ul>
+          <li><strong>Footprint (measurement):</strong> how much surface parking is there, and what share of downtown land does it take, in 50 U.S. downtowns?</li>
+          <li><strong>Candidates (screening):</strong> which individual lots look like redevelopment candidates, based on open data?</li>
+        </ul>
+        <p>The highest shares are in mid-sized downtowns: Albuquerque (20%), Birmingham (19%), St. Louis (18%), Buffalo (16%) and Indianapolis (15%).</p>
+
+        <h2 id="boundary">One downtown boundary for every city</h2>
+        <p>"Downtown" means different things in different cities, so comparing official boundaries would not be fair. I used one rule everywhere: LODES 8 workplace jobs (2023) on a 250 m grid, a 3×3 mean of at least 25 jobs per acre, and the connected cluster containing the densest cell within 3 km of city hall, with holes filled.</p>
+
+        <h2 id="screen">Four-part candidate screen</h2>
+        <p>Each lot is checked against four criteria from open data:</p>
+        <ul>
+          <li>Size of at least 1.5 acres</li>
+          <li>Within 0.5 mile of the downtown core</li>
+          <li>A transit stop within 0.25 mile</li>
+          <li>Surrounding building coverage above the downtown median</li>
+        </ul>
+        <div class="callout glass">Scores are screening results, not recommendations. Zoning and ownership are not verified yet.</div>
+
+        <h2 id="ai">AI: finding lots missing from OpenStreetMap</h2>
+        <p>OpenStreetMap undercounts parking in some cities, so the measured footprint is a lower bound. To find missing lots, I trained a U-Net segmentation model (MobileNet encoder) on NAIP aerial imagery, using mapped OSM lots as labels. Training used 16 cities; Denver, Philadelphia, Seattle and Kansas City were held out for testing.</p>
+        <div class="stats">
+          <div class="stat glass"><b>0.32</b><span>pixel IoU on held-out cities, vs 0.08 for a colour rule</span></div>
+          <div class="stat glass"><b>70%</b><span>of lots over 1 acre detected</span></div>
+          <div class="stat glass"><b data-count="983">983</b><span>unmapped lots proposed in 13 under-mapped downtowns</span></div>
+          <div class="stat glass"><b data-count="467">467</b><span>queued for human review</span></div>
+        </div>
+        <p>The model runs in the browser with TensorFlow.js, and a <a href="https://terbear15.github.io/downtown-parking-footprint/review/" target="_blank" rel="noopener" style="color:var(--blue)">review page</a> lets a person accept or reject each detection before it counts.</p>
+
+        <h2 id="limits">Limits</h2>
+        <p>OSM figures are a lower bound because unmapped lots are not counted. Detections are proposals until reviewed. Manhattan is treated as a special case (the whole borough).</p>
+        <p style="color:var(--muted);font-size:14px">Data: OpenStreetMap contributors (ODbL), U.S. Census Bureau LEHD LODES 8, USDA NAIP imagery. Basemap: OpenFreeMap.</p>
+      </article>
+    </div>
+
+    <a class="next glass reveal" href="heatscape.html"><div><small>Next project</small><b>HeatScape</b></div><span>→</span></a>
+  </main>
+  <footer>© 2026 Terry Boxuan Xu</footer>
+  <script src="../assets/js/site.js"></script>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>HeatScape · Terry Boxuan Xu</title>
+  <meta name="description" content="HeatScape compares walking routes by minutes in direct sun, using LiDAR building heights and tree crowns in twenty U.S. city centers.">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/site.css">
+</head>
+<body>
+  <div class="ambient" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
+  <div class="grid-lines" aria-hidden="true"></div>
+  <nav class="nav glass"><a class="brand" href="../index.html">Terry Xu</a><a class="link" href="../index.html#spatial">Spatial</a><a class="link" href="../index.html#architecture">Architecture</a><a class="link" href="../index.html#about">About</a></nav>
+
+  <main class="wrap">
+    <header class="p-hero">
+      <a class="back glass reveal" href="../index.html#spatial">← All projects</a>
+      <div class="tag-row reveal" style="display:flex;gap:6px;margin-bottom:16px"><span class="chip blue">Pedestrian mobility</span><span class="chip blue">LiDAR</span><span class="chip blue">Routing</span></div>
+      <h1 class="reveal d1">HeatScape</h1>
+      <p class="lead reveal d2">Find the shadier way. HeatScape compares walking routes by how many minutes they spend in direct sun, in the downtowns of twenty large U.S. cities.</p>
+      <div class="btns reveal d3">
+        <a class="btn primary" href="https://terbear15.github.io/Ai-Urban-Heatscape/" target="_blank" rel="noopener">Try HeatScape ↗</a>
+        <a class="btn ghost" href="https://github.com/terbear15/Ai-Urban-Heatscape" target="_blank" rel="noopener">Code on GitHub</a>
+      </div>
+      <div class="meta-bar glass reveal d3" style="margin-top:32px">
+        <div><span>Year</span><b>Fall 2026</b></div>
+        <div><span>Course</span><b>MUSA 5500 · Geospatial Python</b></div>
+        <div><span>Scale</span><b>20 U.S. city centers</b></div>
+        <div><span>Tools</span><b>OSMnx · LiDAR · scikit-learn · MapLibre</b></div>
+      </div>
+    </header>
+
+    <figure class="p-figure glass reveal"><img src="../assets/img/heatscape-og.jpg" alt="HeatScape"></figure>
+
+    <div class="p-body">
+      <aside class="toc"><a href="#what">What it does</a><a href="#data">Data pipeline</a><a href="#route">Shade and routing</a><a href="#limits">Limits</a></aside>
+      <article class="prose">
+        <h2 id="what">What it does</h2>
+        <p>Pick a city, a start and a destination, and how many extra minutes a better route is worth. HeatScape returns three routes: the fastest, a balanced one (about a minute extra), and the shadiest within your budget. In winter it looks for the sunniest route instead. Each route shows minutes in direct sun, a street-by-street list, and the best time to leave. Time and date sliders move the shadows live.</p>
+
+        <h2 id="data">Data pipeline</h2>
+        <ul>
+          <li><strong>Study areas</strong> from official boundaries (NYC NTAs, LA County, city neighborhood layers), clipped to land with Census places.</li>
+          <li><strong>Walking network</strong> from OpenStreetMap with OSMnx. Each segment is offset to its two sidewalks, so shade is sampled where people walk, not on the centerline.</li>
+          <li><strong>Building heights and tree crowns</strong> from USGS 3DEP LiDAR, gridded at 2 m into a canopy height model. Tree crowns are labeled with scipy and polygonized with rasterio.</li>
+          <li><strong>Missing heights</strong> predicted by a scikit-learn random forest from footprint shape, OSM tags and neighboring heights, with 5-fold cross-validated error reported per city.</li>
+          <li>City data builds run on <strong>GitHub Actions</strong>.</li>
+        </ul>
+
+        <figure class="p-figure glass"><img src="../assets/img/heatscape-philly.jpg" alt="Philadelphia skyline"><figcaption>Philadelphia, one of the twenty city centers.</figcaption></figure>
+
+        <h2 id="route">Shade and routing</h2>
+        <p>For each 15-minute slot after departure, the sun position sweeps every building and tree crown into a 2 m shade grid. A time-dependent Dijkstra search updates the sun as the walk goes on and chooses the better sidewalk on each segment. Everything runs in the browser in a Web Worker, with no server.</p>
+
+        <h2 id="limits">Limits</h2>
+        <div class="callout glass">HeatScape is a model, not a forecast. It shows shadows from mapped buildings and trees under a clear sky. It does not measure temperature, clouds, awnings or safety, and tree data reflect the LiDAR survey year (2014–2022).</div>
+      </article>
+    </div>
+
+    <a class="next glass reveal" href="medilink.html"><div><small>Next project</small><b>MediLink (architecture)</b></div><span>→</span></a>
+  </main>
+  <footer>© 2026 Terry Boxuan Xu</footer>
+  <script src="../assets/js/site.js"></script>
+</body>
+</html>

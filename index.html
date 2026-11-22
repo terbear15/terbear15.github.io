@@ -3,179 +3,308 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Your Name — Spatial Data & Design</title>
-  <meta name="description" content="Portfolio of Your Name: spatial analytics, web projects and architecture design.">
-
+  <title>Terry Boxuan Xu · Urban Spatial Analytics & Design</title>
+  <meta name="description" content="Portfolio of Terry Boxuan Xu: urban spatial analytics, transportation and planning data, and architecture. MUSA at the University of Pennsylvania.">
+  <meta property="og:title" content="Terry Boxuan Xu · Urban Spatial Analytics & Design">
+  <meta property="og:description" content="Spatial data, transportation and planning analysis, and architecture.">
+  <meta property="og:image" content="https://terbear15.github.io/assets/img/parking-cities.jpg">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='16' fill='%230a6cff'/><text x='50%25' y='56%25' font-family='Arial' font-weight='700' font-size='28' fill='white' text-anchor='middle' dominant-baseline='middle'>TX</text></svg>">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;650&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/site.css">
 </head>
 <body>
+  <div class="ambient" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
+  <div class="grid-lines" aria-hidden="true"></div>
 
-  <header class="site-header">
-    <div class="wrap">
-      <a class="brand" href="#top">Your Name</a>
-      <nav class="nav">
-        <a href="#projects">Projects</a>
-        <a href="#architecture">Architecture</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
-      </nav>
-    </div>
-  </header>
+  <nav class="nav glass" aria-label="Main">
+    <a class="brand" href="#top">Terry Xu</a>
+    <a class="link" href="#spatial">Spatial</a>
+    <a class="link" href="#architecture">Architecture</a>
+    <a class="link" href="#about">About</a>
+    <a class="link" href="#contact">Contact</a>
+  </nav>
 
   <main id="top">
-
     <!-- ============ HERO ============ -->
-    <div class="wrap hero">
-      <p class="eyebrow">Urban Spatial Analytics &middot; Architecture</p>
-      <h1>Making cities legible through data and design.</h1>
-      <p class="lead">
-        I'm a master's student in urban spatial analytics with a background in architecture.
-        I build maps, web projects and analyses, and I design spaces.
-      </p>
-      <div class="actions">
-        <a class="btn primary" href="#projects">See projects</a>
-        <a class="btn" href="#architecture">Architecture work</a>
-      </div>
-    </div>
-
-    <!-- ============ PROJECTS (priority) ============ -->
-    <section id="projects">
-      <div class="wrap">
-        <div class="section-head">
-          <h2>Data &amp; web projects</h2>
-          <p>Class projects in spatial analysis, visualization and web design.</p>
+    <header class="hero">
+      <div class="wrap hero-grid">
+        <div>
+          <div class="eyebrow glass reveal"><span class="dot"></span>Open to summer 2027 internships</div>
+          <h1 class="reveal d1">Reading cities<br>through <span class="grad">data and design.</span></h1>
+          <p class="lead reveal d2">
+            I'm Terry Boxuan Xu, a Master of Urban Spatial Analytics student at the University of Pennsylvania
+            with a Bachelor of Architecture from Syracuse. I work on transportation, land use and planning
+            questions with spatial data, and I bring an architect's eye to how the results are shown.
+          </p>
+          <div class="btns reveal d3">
+            <a class="btn primary" href="#spatial">View spatial work
+              <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M8 3v10M3.5 8.5 8 13l4.5-4.5"/></svg></a>
+            <a class="btn ghost" href="#architecture">Architecture</a>
+          </div>
+          <div class="scroll-cue reveal d4"><span class="mouse"></span>Scroll</div>
         </div>
 
-        <div class="grid">
-          <!-- Copy one <a class="card"> block per project. -->
-          <a class="card" href="project-template.html">
-            <div class="thumb"></div>
-            <div class="card-body">
-              <h3>Project title one</h3>
-              <p>One sentence on the question you asked and what you found.</p>
-              <div class="tags">
-                <span class="tag">Python</span>
-                <span class="tag">GIS</span>
-                <span class="tag status">in progress</span>
-              </div>
-            </div>
-          </a>
+        <aside class="profile glass reveal d2">
+          <div class="avatar">TX</div>
+          <h3>Terry Boxuan Xu</h3>
+          <div class="role">MUSA '27 · University of Pennsylvania · Philadelphia</div>
+          <div class="focus">
+            <div><i style="background:#e3eeff">🚌</i>Transportation &amp; mobility</div>
+            <div><i style="background:#e0f5ef">🗺️</i>Planning &amp; land use</div>
+            <div><i style="background:#eee8ff">📊</i>Spatial data analysis</div>
+          </div>
+          <div class="chips">
+            <span class="chip blue">Python</span><span class="chip blue">R</span><span class="chip blue">GeoPandas</span>
+            <span class="chip blue">OSMnx</span><span class="chip blue">ArcGIS</span><span class="chip blue">MapLibre</span>
+            <span class="chip">Rhino</span><span class="chip">Adobe CC</span>
+          </div>
+        </aside>
+      </div>
+    </header>
 
-          <a class="card" href="project-template.html">
-            <div class="thumb alt"></div>
-            <div class="card-body">
-              <h3>Project title two</h3>
-              <p>One sentence on the question you asked and what you found.</p>
-              <div class="tags">
-                <span class="tag">Web map</span>
-                <span class="tag">JavaScript</span>
-                <span class="tag status">in progress</span>
-              </div>
-            </div>
-          </a>
+    <!-- ============ 01 SPATIAL ============ -->
+    <section id="spatial">
+      <div class="wrap">
+        <div class="sec-head reveal">
+          <div>
+            <div class="sec-num">01 · Urban spatial analytics</div>
+            <h2>Transportation, planning<br>and spatial data.</h2>
+          </div>
+          <p>Projects built at Penn: multi-city studies, live web maps, and policy analysis in R and Python.</p>
+        </div>
 
-          <a class="card" href="project-template.html">
-            <div class="thumb"></div>
-            <div class="card-body">
-              <h3>Project title three</h3>
-              <p>One sentence on the question you asked and what you found.</p>
-              <div class="tags">
-                <span class="tag">Data viz</span>
-                <span class="tag">Design</span>
-                <span class="tag status">in progress</span>
+        <div class="featured">
+          <!-- Parking -->
+          <article class="feature glass reveal">
+            <a class="media contain" href="projects/parking.html" aria-label="Downtown Parking Footprint">
+              <img src="assets/img/parking-grid.jpg" alt="Surface parking lots in four U.S. downtowns, shaded by redevelopment screening score" loading="lazy">
+            </a>
+            <div class="body">
+              <div class="tag-row"><span class="chip blue">Land use</span><span class="chip blue">AI · U-Net</span><span class="chip">50 cities</span></div>
+              <h3>Downtown Parking Footprint</h3>
+              <p>How much downtown land do U.S. cities give to surface parking, and which lots could be redeveloped? One consistent downtown boundary for 50 cities, a four-part lot screen, and a model that finds lots missing from OpenStreetMap.</p>
+              <div class="stats">
+                <div class="stat"><b data-count="50">50</b><span>downtowns measured</span></div>
+                <div class="stat"><b data-count="13346">13,346</b><span>surface lots mapped</span></div>
+                <div class="stat"><b data-count="5407">5,407</b><span>acres of parking</span></div>
+                <div class="stat"><b data-count="983">983</b><span>unmapped lots proposed by AI</span></div>
+              </div>
+              <div class="links">
+                <a class="pill-link dark" href="projects/parking.html">Case study</a>
+                <a class="pill-link" href="https://terbear15.github.io/downtown-parking-footprint/" target="_blank" rel="noopener">Live map ↗</a>
+                <a class="pill-link" href="https://github.com/terbear15/downtown-parking-footprint" target="_blank" rel="noopener">Code ↗</a>
               </div>
             </div>
+          </article>
+
+          <!-- HeatScape -->
+          <article class="feature flip glass reveal">
+            <a class="media contain heat" href="projects/heatscape.html" aria-label="HeatScape">
+              <img src="assets/img/heatscape-og.jpg" alt="HeatScape: find the shadier way" loading="lazy">
+            </a>
+            <div class="body">
+              <div class="tag-row"><span class="chip blue">Pedestrian routing</span><span class="chip blue">LiDAR</span><span class="chip">MUSA 5500</span></div>
+              <h3>HeatScape</h3>
+              <p>A web tool that compares walking routes by minutes in direct sun. Building heights and tree crowns come from USGS LiDAR; a time-aware routing engine picks the shadier route in summer and the sunnier one in winter.</p>
+              <div class="stats">
+                <div class="stat"><b data-count="20">20</b><span>U.S. city centers</span></div>
+                <div class="stat"><b>2 m</b><span>shade grid, every 15 min</span></div>
+              </div>
+              <div class="links">
+                <a class="pill-link dark" href="projects/heatscape.html">Case study</a>
+                <a class="pill-link" href="https://terbear15.github.io/Ai-Urban-Heatscape/" target="_blank" rel="noopener">Try it ↗</a>
+                <a class="pill-link" href="https://github.com/terbear15/Ai-Urban-Heatscape" target="_blank" rel="noopener">Code ↗</a>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <!-- Policy analytics -->
+        <div class="sub-head reveal">
+          <h3>Public policy analytics</h3>
+          <span>MUSA 5080 · R, tidycensus, sf · <a href="https://terbear15.github.io/MUSA-5080-portfolio/" target="_blank" rel="noopener" style="color:var(--blue)">Course site ↗</a></span>
+        </div>
+        <div class="cards">
+          <a class="card glass reveal" href="https://terbear15.github.io/MUSA-5080-portfolio/assignments/assignment2.html" target="_blank" rel="noopener">
+            <div class="ico" style="background:#e3eeff">📏</div>
+            <h4>Who do we know the least about?</h4>
+            <p>Margins of error in ACS median rent across North Carolina's 100 counties. Small rural counties are measured least reliably, with errors up to 38% of the estimate.</p>
+            <span class="more">Read analysis</span>
           </a>
+          <a class="card glass reveal d1" href="https://terbear15.github.io/MUSA-5080-portfolio/assignments/assignment3.html" target="_blank" rel="noopener">
+            <div class="ico" style="background:#e0f5ef">🔎</div>
+            <h4>Verify the claim: poverty change in Philadelphia</h4>
+            <p>Rebuilding a news story's tract data from ACS 2010 and 2017 and testing which changes are statistically significant.</p>
+            <span class="more">Read analysis</span>
+          </a>
+          <a class="card glass reveal d2" href="https://terbear15.github.io/MUSA-5080-portfolio/assignments/assignment5.html" target="_blank" rel="noopener">
+            <div class="ico" style="background:#fff0e6">🏠</div>
+            <h4>House price prediction, Chicago</h4>
+            <p>Team model with location and crime features, a north/south lot-area term and 10-fold cross-validation, checked for fairness across income groups.</p>
+            <span class="more">Read analysis</span>
+          </a>
+          <a class="card glass reveal d3" href="https://terbear15.github.io/MUSA-5080-portfolio/assignments/assignment6.html" target="_blank" rel="noopener">
+            <div class="ico" style="background:#eee8ff">⚖️</div>
+            <h4>Parole risk model and fairness</h4>
+            <p>A rearrest model for Georgia parole. Leaving out race did not equalize errors; I compare thresholds for supervision and for reentry services.</p>
+            <span class="more">Read analysis</span>
+          </a>
+        </div>
+
+        <!-- Maps -->
+        <div class="sub-head reveal">
+          <h3>30 Day Map Challenge 2026</h3>
+          <span>R · ggplot2 · sf · WebGL · <a href="https://github.com/terbear15/30DayMapChallenge2026" target="_blank" rel="noopener" style="color:var(--blue)">All maps ↗</a></span>
+        </div>
+        <div class="rail reveal">
+          <div class="map-card glass" data-gallery="d02"><div class="img"><img src="assets/img/map-day02.jpg" alt="" loading="lazy"></div><div class="cap"><small>Day 02 · Lines</small><div>A way through Philly</div></div></div>
+          <div class="map-card glass" data-gallery="d22"><div class="img"><img src="assets/img/map-day22.jpg" alt="" loading="lazy" style="object-position:30% 50%"></div><div class="cap"><small>Day 22 · Projections</small><div>Flight in Light</div></div></div>
+          <div class="map-card glass" data-gallery="d05"><div class="img"><img src="assets/img/map-day05.jpg" alt="" loading="lazy"></div><div class="cap"><small>Day 05 · Sight</small><div>The view from Twin Peaks</div></div></div>
+          <div class="map-card glass" data-gallery="d04"><div class="img"><img src="assets/img/map-day04.jpg" alt="" loading="lazy"></div><div class="cap"><small>Day 04 · Clusters</small><div>Coffee, in good company</div></div></div>
+          <div class="map-card glass" data-gallery="d17"><div class="img"><img src="assets/img/map-day17.jpg" alt="" loading="lazy"></div><div class="cap"><small>Day 17 · Light / Dark</small><div>Dusk Till Dawn</div></div></div>
+          <div class="map-card glass" data-gallery="d03"><div class="img"><img src="assets/img/map-day03.jpg" alt="" loading="lazy"></div><div class="cap"><small>Day 03 · Polygons</small><div>A greener Philly</div></div></div>
+          <div class="map-card glass" data-gallery="d06"><div class="img"><img src="assets/img/map-day06.jpg" alt="" loading="lazy"></div><div class="cap"><small>Day 06 · Vintage</small><div>Capital of a young republic</div></div></div>
+          <div class="map-card glass" data-gallery="d07"><div class="img"><img src="assets/img/map-day07.jpg" alt="" loading="lazy"></div><div class="cap"><small>Day 07 · 10 minutes</small><div>Philly / After Dark</div></div></div>
+          <div class="map-card glass" data-gallery="d01"><div class="img"><img src="assets/img/map-day01.jpg" alt="" loading="lazy"></div><div class="cap"><small>Day 01 · Points</small><div>Hungry in Syracuse</div></div></div>
         </div>
       </div>
     </section>
 
-    <!-- ============ ARCHITECTURE ============ -->
+    <!-- ============ 02 ARCHITECTURE ============ -->
     <section id="architecture">
       <div class="wrap">
-        <div class="section-head">
-          <h2>Architecture</h2>
-          <p>Selected design work from my architecture studies.</p>
+        <div class="sec-head reveal">
+          <div>
+            <div class="sec-num">02 · Architecture</div>
+            <h2>Design work,<br>2022–2026.</h2>
+          </div>
+          <p>Five years of architecture at Syracuse: studios in New York, Italy, Bosnia, the Philippines and London, plus professional work in Beijing.</p>
         </div>
 
-        <div class="grid">
-          <!-- Swap the .thumb div for: <img class="thumb" src="images/arch-01.jpg" alt="Short description"> -->
-          <a class="card" href="project-template.html">
-            <div class="thumb alt"></div>
-            <div class="card-body">
-              <h3>Architecture project one</h3>
-              <p>Type, site, year. One line on the concept.</p>
-              <div class="tags"><span class="tag">Housing</span><span class="tag">2023</span></div>
-            </div>
-          </a>
+        <article class="arch-feature glass reveal">
+          <a class="media" href="projects/medilink.html"><img src="assets/img/medilink-hero.jpg" alt="MediLink perspective at St Mary's Hospital, Paddington" loading="lazy"></a>
+          <div class="body">
+            <div class="tag-row" style="display:flex;gap:6px;margin-bottom:14px"><span class="chip blue">Directed research</span><span class="chip">Spring 2026</span></div>
+            <h3>MediLink</h3>
+            <div class="subtitle">Care in Motion · St Mary's Hospital, London</div>
+            <div class="award">🏅 James A. Britton Memorial Award, Citation for Excellence in Design Research</div>
+            <p>The hospital as a "Program Bank": a permanent structure that hosts mobile, modular pods, so care capacity can expand, contract and move into nearby buildings when demand shifts.</p>
+            <div class="links"><a class="pill-link dark" href="projects/medilink.html">View project</a></div>
+          </div>
+        </article>
 
-          <a class="card" href="project-template.html">
-            <div class="thumb"></div>
-            <div class="card-body">
-              <h3>Architecture project two</h3>
-              <p>Type, site, year. One line on the concept.</p>
-              <div class="tags"><span class="tag">Cultural</span><span class="tag">2022</span></div>
-            </div>
-          </a>
+        <div class="sub-head reveal"><h3>Academic studios</h3><span>Click a project to open the drawings</span></div>
+        <div class="arch-grid">
+          <button class="arch-card glass reveal" data-gallery="btw"><div class="img"><img src="assets/img/btw-cover.jpg" alt="" loading="lazy"></div><div class="cap"><small>ARC 409 · Spring 2025 · Hogansburg, NY</small><div>Between the Woods</div></div></button>
+          <button class="arch-card glass reveal d1" data-gallery="convergent"><div class="img"><img src="assets/img/convergent-cover.jpg" alt="" loading="lazy"></div><div class="cap"><small>Urban design · 2025 · Beijing</small><div>Convergent Axis</div></div></button>
+          <button class="arch-card glass reveal d2" data-gallery="seed"><div class="img"><img src="assets/img/seed-cover.jpg" alt="" loading="lazy"></div><div class="cap"><small>ARC 407 · Spring 2024 · Sarajevo</small><div>Aquatic Seed Library</div></div></button>
+          <button class="arch-card glass reveal" data-gallery="primavera"><div class="img"><img src="assets/img/primavera-cover.jpg" alt="" loading="lazy"></div><div class="cap"><small>ARC 408 · Fall 2024 · Arborea, Italy</small><div>Primavera della Costa Sussurrante</div></div></button>
+          <button class="arch-card glass reveal d1" data-gallery="negotiated"><div class="img"><img src="assets/img/negotiated-cover.jpg" alt="" loading="lazy"></div><div class="cap"><small>ARC 208 · Spring 2023 · Manila</small><div>A Negotiated Landscape</div></div></button>
+          <button class="arch-card glass reveal d2" data-gallery="survey"><div class="img"><img src="assets/img/survey-cover.jpg" alt="" loading="lazy"></div><div class="cap"><small>Florence program · Fall 2024</small><div>Survey of Italian Architecture</div></div></button>
+        </div>
 
-          <a class="card" href="project-template.html">
-            <div class="thumb alt"></div>
-            <div class="card-body">
-              <h3>Architecture project three</h3>
-              <p>Type, site, year. One line on the concept.</p>
-              <div class="tags"><span class="tag">Urban</span><span class="tag">2021</span></div>
-            </div>
-          </a>
+        <div class="sub-head reveal"><h3>Professional work</h3><span>WAY Studio, Beijing · Summer 2024</span></div>
+        <div class="arch-grid small">
+          <button class="arch-card glass reveal" data-gallery="wayFuture"><div class="img"><img src="assets/img/way-future-cover.jpg" alt="" loading="lazy"></div><div class="cap"><small>Installation · Venice</small><div>Future City Study</div></div></button>
+          <button class="arch-card glass reveal d1" data-gallery="wayChangzhi"><div class="img"><img src="assets/img/way-changzhi-cover.jpg" alt="" loading="lazy"></div><div class="cap"><small>Healthcare · Changzhi</small><div>Changzhi Nursing Home</div></div></button>
+          <button class="arch-card glass reveal d2" data-gallery="wayHot"><div class="img"><img src="assets/img/way-hotspring-cover.jpg" alt="" loading="lazy"></div><div class="cap"><small>Resort · Changzhi</small><div>Hot Spring Hotel</div></div></button>
         </div>
       </div>
     </section>
 
-    <!-- ============ ABOUT ============ -->
+    <!-- ============ 03 ABOUT ============ -->
     <section id="about">
-      <div class="wrap about">
-        <div>
-          <div class="section-head"><h2>About</h2></div>
-          <p>
-            I started in architecture, where I learned to think about how people move through
-            and live in space. Now I study urban spatial analytics, using data and code to
-            understand cities at a larger scale.
-          </p>
-          <p>
-            I'm interested in where the two meet: maps that explain, analysis that informs
-            design, and interfaces that make both easy to read.
-          </p>
+      <div class="wrap">
+        <div class="sec-head reveal">
+          <div><div class="sec-num">03 · About</div><h2>From buildings<br>to city systems.</h2></div>
         </div>
-        <ul class="facts">
-          <li><span>Studying</span><span>M.S. Urban Spatial Analytics</span></li>
-          <li><span>Before</span><span>Architecture</span></li>
-          <li><span>Tools</span><span>Python, GIS, HTML/CSS</span></li>
-          <li><span>Based in</span><span>Your City</span></li>
-        </ul>
+        <div class="about-grid">
+          <div class="panel glass bio reveal">
+            <p>I trained as an architect, where I learned to look closely at sites: how people move, wait, gather and get around. At Penn I'm learning to ask those questions at the scale of a whole city, with transit data, census data, LiDAR and machine learning.</p>
+            <p>I'm interested in transportation and land use: where cities give space to cars, how people walk, and how planning decisions can be tested with evidence. I grew up between Beijing and Vancouver, and speak Mandarin and English.</p>
+          </div>
+          <div class="panel glass reveal">
+            <h3>Experience</h3>
+            <ul class="timeline">
+              <li class="now"><b>Marketing Team Assistant</b><span>International Student &amp; Scholar Services (ISSS), University of Pennsylvania</span><em>Current</em></li>
+              <li><b>Research Studio Assistant</b><span>Directed Research, Syracuse School of Architecture · Jan–May 2026</span><em>Publications, graphics and model photography for the studio.</em></li>
+              <li><b>Summer Intern</b><span>WAY Studio, Beijing · May–Aug 2024</span><em>Nursing home and hospital, hotel, museum and café projects; client meetings.</em></li>
+            </ul>
+          </div>
+          <div class="panel glass reveal d1">
+            <h3>Education</h3>
+            <ul class="timeline">
+              <li class="now"><b>Master of Urban Spatial Analytics</b><span>University of Pennsylvania, Weitzman School of Design · 2026–2027</span></li>
+              <li><b>Bachelor of Architecture</b><span>Syracuse University · 2021–2026</span><em>Minor in Real Estate, Whitman School of Management · Dean's List 2021–2026</em></li>
+              <li><b>Florence Architecture Program</b><span>Syracuse University in Florence · Fall 2024</span></li>
+            </ul>
+          </div>
+          <div class="panel glass reveal d2">
+            <h3>Skills</h3>
+            <div class="skills">
+              <div><h4>Spatial &amp; data</h4><div class="chips"><span class="chip blue">Python</span><span class="chip blue">GeoPandas</span><span class="chip blue">OSMnx</span><span class="chip blue">scikit-learn</span><span class="chip blue">R · tidycensus · sf</span><span class="chip blue">ArcGIS</span><span class="chip blue">LiDAR (3DEP)</span><span class="chip blue">TensorFlow.js</span></div></div>
+              <div><h4>Web &amp; mapping</h4><div class="chips"><span class="chip blue">MapLibre GL</span><span class="chip blue">HTML · CSS · JS</span><span class="chip blue">GitHub Actions</span><span class="chip blue">Quarto</span></div></div>
+              <div><h4>Design</h4><div class="chips"><span class="chip">Rhino</span><span class="chip">Grasshopper</span><span class="chip">Revit</span><span class="chip">Enscape</span><span class="chip">Photoshop</span><span class="chip">Illustrator</span><span class="chip">InDesign</span><span class="chip">Model making</span></div></div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
     <!-- ============ CONTACT ============ -->
-    <section id="contact" class="contact">
+    <section id="contact">
       <div class="wrap">
-        <h2>Let's talk.</h2>
-        <p>Open to internships, collaborations and good conversations about cities.</p>
-        <div class="links">
-          <a class="btn primary" href="mailto:you@example.com">you@example.com</a>
-          <a class="btn" href="https://github.com/your-username">GitHub</a>
-          <a class="btn" href="https://www.linkedin.com/in/your-username">LinkedIn</a>
-          <a class="btn" href="files/cv.pdf">CV (PDF)</a>
+        <div class="contact glass reveal">
+          <h2>Let's work on cities together.</h2>
+          <p>I'm looking for summer 2027 internships in transportation planning, urban analytics and planning data.</p>
+          <div class="btns">
+            <a class="btn primary" href="mailto:terryxu0515@gmail.com">terryxu0515@gmail.com</a>
+            <a class="btn ghost" href="https://github.com/terbear15" target="_blank" rel="noopener">GitHub</a>
+          </div>
         </div>
       </div>
     </section>
-
   </main>
 
-  <footer>
-    <div class="wrap">&copy; 2026 Your Name</div>
-  </footer>
+  <footer>© 2026 Terry Boxuan Xu · Philadelphia</footer>
 
+  <div class="lightbox" role="dialog" aria-modal="true">
+    <button class="lb-close" aria-label="Close">×</button>
+    <div class="lb-inner"><div class="lb-panel"></div></div>
+  </div>
+
+  <script>
+    const I = (p, n) => Array.from({ length: n }, (_, i) => `assets/img/${p}-${i + 1}.jpg`);
+    window.GALLERY = {
+      btw: { kicker: 'ARC 409 · Spring 2025', title: 'Between the Woods', meta: 'Hogansburg, NY · with Henry Hansheng Su · Instructor: Terrance Goode',
+        text: 'A community and cultural center for the St. Regis Mohawk (Kanien\'kehá:ka) people on the river at Akwesasne, with a museum, ceremonial and education spaces, built around Haudenosaunee traditions and the landscape.', images: I('btw', 4) },
+      convergent: { kicker: 'Urban design · Jul–Nov 2025', title: 'Convergent Axis', meta: 'Xizhimen, Beijing · with Rulin "Bob" Ye and Yingxuan "Louise" Liu',
+        text: 'Xizhimen links three subway lines and Beijing North Railway Station through a tangle of elevated bridges. The project reorganizes transfers and pedestrian routes between the station, the mall and the subway.', images: I('convergent', 4) },
+      seed: { kicker: 'ARC 407 · Spring 2024', title: 'Aquatic Seed Library', meta: 'Sarajevo, Bosnia and Herzegovina · Individual · Instructor: Christina Chi Zhang',
+        text: 'A civic structure spanning the Miljacka River. Residents\' wartime stories of growing seeds to survive became a water-based seed library and bridge that turns memory into a shared public space.', images: I('seed', 3) },
+      primavera: { kicker: 'ARC 408 · Fall 2024', title: 'Primavera della Costa Sussurrante', meta: 'Arborea, Sardinia · Individual · Instructor: Olivia Gori',
+        text: 'A renewed courtyard for a middle school, based on site visits and observation of how students and families use and move through the space.', images: I('primavera', 4) },
+      negotiated: { kicker: 'ARC 208 · Spring 2023', title: 'A Negotiated Landscape', meta: 'Valenzuela, Manila · Individual · Instructor: Joseph Godlewski',
+        text: 'A riverfront for flood protection and public life: levees that follow the river, debris traps against pollution, and space for the community along the water.', images: I('negotiated', 3) },
+      survey: { kicker: 'Florence program · Fall 2024', title: 'Survey of Italian Architecture', meta: 'Rome, Venice, Milan, Florence and Arborea',
+        text: 'On-site survey sketches and analytical drawings of Italian buildings and urban spaces.', images: I('survey', 1) },
+      wayFuture: { kicker: 'WAY Studio · Summer 2024', title: 'Future City Study', meta: 'Venice installation · Contribution: model massing and model studies',
+        text: 'An installation about how transit and biotechnology could reconnect high-density cities in three dimensions.', images: I('way-future', 2) },
+      wayChangzhi: { kicker: 'WAY Studio · Summer 2024', title: 'Changzhi Nursing Home', meta: 'Changzhi, China · Contribution: massing, model studies, renders, diagrams', images: I('way-changzhi', 2) },
+      wayHot: { kicker: 'WAY Studio · Summer 2024', title: 'Hot Spring Hotel', meta: 'Changzhi, China · Contribution: digital model, renders, design', images: I('way-hotspring', 3) },
+      d01: { kicker: 'Day 01 · Points', title: 'Hungry in Syracuse', text: 'A restaurant guide from my undergraduate years: eight places to start a dinner out.', images: ['assets/img/mapfull-day01.jpg'] },
+      d02: { kicker: 'Day 02 · Lines', title: 'A way through Philly', text: 'Eight daytime bus routes with stops within 450 m of 34th & Walnut, near Weitzman, against the wider SEPTA network.', images: ['assets/img/mapfull-day02.jpg'] },
+      d03: { kicker: 'Day 03 · Polygons', title: 'A greener Philly', text: 'Park and recreation land in Philadelphia, grouped by mapped area.', images: ['assets/img/mapfull-day03.jpg'] },
+      d04: { kicker: 'Day 04 · Clusters', title: 'Coffee, in good company', text: 'Manhattan\'s café clusters, with enlarged views of the Upper West/East Sides, Midtown and Lower Manhattan.', images: ['assets/img/mapfull-day04.jpg'] },
+      d05: { kicker: 'Day 05 · Sight', title: 'The view from Twin Peaks', text: 'A terrain viewshed of San Francisco from the north summit, with two elevation profiles.', images: ['assets/img/mapfull-day05.jpg'] },
+      d06: { kicker: 'Day 06 · Vintage', title: 'Philadelphia, capital of a young republic', text: 'An annotated reproduction of John Hills\'s 1796 plan, with the government district enlarged and a timeline of the capital decade.', images: ['assets/img/mapfull-day06.jpg'] },
+      d07: { kicker: 'Day 07 · 10 minute map', title: 'Philly / After Dark', text: 'A minimal night-palette street map of central Philadelphia with six named corridors.', images: ['assets/img/mapfull-day07.jpg'] },
+      d17: { kicker: 'Day 17 · Light / Dark', title: 'Dusk Till Dawn', text: 'An interactive WebGL map that follows sunlight and NASA Black Marble city lights across the United States.', link: 'https://terbear15.github.io/30DayMapChallenge2026/day17-light-dark/', linkText: 'Open interactive map', images: ['assets/img/map-day17.jpg'] },
+      d22: { kicker: 'Day 22 · Projections', title: 'Flight in Light', text: 'A New York–Tokyo flight on a globe that unfolds into flat projections, with daylight moving across the route.', link: 'https://terbear15.github.io/30DayMapChallenge2026/day22-projections/', linkText: 'Open interactive map', images: ['assets/img/map-day22.jpg'] }
+    };
+  </script>
+  <script src="assets/js/site.js"></script>
 </body>
 </html>
