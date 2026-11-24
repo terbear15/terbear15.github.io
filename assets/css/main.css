@@ -524,3 +524,9 @@ table.matrix { border-collapse: collapse; width: 100%; min-width: 880px; font-si
 .zoom .ib, .book .ib { background: rgba(10,11,12,.78); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); }
 .zoom .z-hint { background: rgba(10,11,12,.75); padding: 7px 14px; border-radius: 999px; }
 .book .hint { bottom: 26px; left: 24px; transform: none; }
+
+/* Descenders (g, y, p): give clipped/metal text room below the baseline */
+.rv-line { padding-bottom: .16em; margin-bottom: -.16em; }
+.rv-line > span { padding-bottom: .16em; margin-bottom: -.16em; }
+.metal { padding-bottom: .14em; margin-bottom: -.14em; }
+h1.metal, h2.metal, h3.metal, b.metal, a.metal { display: inline-block; }
