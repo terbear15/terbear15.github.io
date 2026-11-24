@@ -188,7 +188,7 @@
       const fr = document.createElement('div'), bk = document.createElement('div'), sh = document.createElement('div');
       fr.className = 'face front'; bk.className = 'face backf'; sh.className = 'shade';
       fr.style.backgroundImage = `url(${src(i)}), url(${src(i, false)})`; bk.style.backgroundImage = `url(${src(j)}), url(${src(j, false)})`;
-      leaf.append(fr, bk, sh); spread.appendChild(leaf);
+      leaf.append(fr, bk); spread.appendChild(leaf);
       // under the leaf: the destination's half that the leaf uncovers
       const under = document.createElement('div'); under.className = 'pg';
       under.style.cssText = `background-image:url(${src(j)}),url(${src(j, false)});clip-path:${dir > 0 ? 'inset(0 0 0 50%)' : 'inset(0 50% 0 0)'};z-index:3`;
