@@ -175,6 +175,7 @@
     function open(k, start = 0) {
       const B = window.BOOKS[k]; if (!B) return; key = k; pages = Array.from({ length: B.n }); i = start;
       title.innerHTML = `<b>${B.title}</b>${B.sub || ''}`;
+      const ar = B.ar || 2481 / 1754; spread.style.aspectRatio = ar; spread.style.width = `min(100%, calc((100vh - 140px) * ${ar}))`;
       dots.innerHTML = ''; pages.forEach((_, j) => { const b = document.createElement('button'); b.setAttribute('aria-label', 'Page ' + (j + 1)); b.onclick = () => jump(j); dots.appendChild(b); });
       paint(); book.classList.add('open'); document.body.style.overflow = 'hidden';
       history.replaceState(null, '', '#' + k);

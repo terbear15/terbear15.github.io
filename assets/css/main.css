@@ -231,7 +231,7 @@ h1, h2, h3, h4 { font-weight: 300; letter-spacing: -.02em; margin: 0; }
 @keyframes pin { 50% { box-shadow: 0 0 0 8px rgba(156,194,232,.05), 0 0 26px 8px rgba(200,225,255,.35); } }
 
 /* Experience */
-.xp { display: grid; grid-template-columns: 280px 1fr; gap: 60px; }
+.xp { display: grid; grid-template-columns: 400px 1fr; gap: 48px; }
 .xp-list { border-top: 1px solid var(--line); }
 .xp-row { display: grid; grid-template-columns: 150px 1fr auto; gap: 24px; padding: 26px 0; border-bottom: 1px solid var(--line); align-items: baseline; transition: padding .5s var(--ease); }
 .xp-row:hover { padding-left: 10px; }
@@ -526,7 +526,8 @@ table.matrix { border-collapse: collapse; width: 100%; min-width: 880px; font-si
 .book .hint { bottom: 26px; left: 24px; transform: none; }
 
 /* Descenders (g, y, p): give clipped/metal text room below the baseline */
-.rv-line { padding-bottom: .16em; margin-bottom: -.16em; }
-.rv-line > span { padding-bottom: .16em; margin-bottom: -.16em; }
-.metal { padding-bottom: .14em; margin-bottom: -.14em; }
+.display, .h2, .h3, .case-hero h1, .show-head h2, .arch-feature h3, .door h3, .next-case b { line-height: 1.08 !important; }
+.rv-line { padding-bottom: .26em; margin-bottom: -.26em; }
+.rv-line > span { padding-bottom: .26em; margin-bottom: -.26em; }
+.metal { padding-bottom: .24em; margin-bottom: -.24em; -webkit-box-decoration-break: clone; box-decoration-break: clone; }
 h1.metal, h2.metal, h3.metal, b.metal, a.metal { display: inline-block; }
